@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Group_Host__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Household hosting a Community Group</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Household hosting a Community Group</inlineHelpText>
+    <label>Community Group Host</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
