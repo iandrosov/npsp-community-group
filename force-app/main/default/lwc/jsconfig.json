@@ -8,7 +8,10 @@
             ],
             "c/cg-list": [
                 "cgList/cgList.js"
-            ]
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ]            
         }
     },
     "include": [
