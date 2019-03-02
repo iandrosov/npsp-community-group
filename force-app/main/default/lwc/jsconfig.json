@@ -5,6 +5,9 @@
         "paths": {
             "c/cg-tile": [
                 "cgTile/cgTile.js"
+            ],
+            "c/cg-list": [
+                "cgList/cgList.js"
             ]
         }
     },
