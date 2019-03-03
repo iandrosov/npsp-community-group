@@ -1,0 +1,39 @@
+<template>
+	<lightning-card title="Groups" icon-name="utility:animal_and_nature" >
+		<div class="slds-card__body_inner">
+			<!-- Start CG list -->
+			<template if:true={communityGroups.data}>
+                <lightning-input type="search"
+                    onchange={handleSearchTermChange}
+                    variant="label-hidden"
+                    class="slds-m-bottom_small"
+                    label="Search"
+                    placeholder="Search for groups"
+                    value={searchTerm}>
+                </lightning-input>
+				<lightning-layout multiple-rows="true" pull-to-boundary="small" oncgview={handleCommunityGroupView}>
+					<template for:each={communityGroups.data} for:item="cg">
+						<lightning-layout-item key={cg.Id} size="3" class="slds-p-around_x-small">
+							<!-- Start bear tile -->
+							<c-cg-tile cg={cg}></c-cg-tile>
+							<!-- End bear tile -->
+						</lightning-layout-item>
+					</template>
+                </lightning-layout>
+                <!-- No bears found -->
+                <template if:false={hasResults}>
+                    <div class="slds-align_absolute-center slds-m-vertical_small">
+                        This is very disturbing, we did not find results...
+                    </div>
+                </template>
+			</template>
+			<!-- End bear list -->
+			<!-- Data failed to load -->
+			<template if:true={communityGroups.error}>
+				<div class="slds-text-color_error">
+					An error occurred while loading the group list
+				</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>

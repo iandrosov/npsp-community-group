@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title={cg.Name} class="bear-tile">
+    <lightning-card title={cg.Name} class="cg-tile">
             <div slot="actions">
                     <lightning-button-icon
                         icon-name="utility:search"
@@ -15,10 +15,9 @@
                     <img src={appResources.bearSilhouette} alt="CG profile" class="bear-silhouette"/>
                 </div>
                 <div class="slds-media__body">
-                    <p class="slds-m-bottom_xx-small">{cg.Sex__c}</p>
-                    <p class="slds-m-bottom_xx-small">{cg.Age__c} years old</p>
-                    <p class="slds-m-bottom_xx-small">{cg.Height__c} cm</p>
-                    <p class="slds-m-bottom_xx-small">{cg.Weight__c} Kg</p>
+                    <p class="slds-m-bottom_xx-small">{cg.BillingStreet}</p>
+                    <p class="slds-m-bottom_xx-small">{cg.BillingCity}</p>
+                    <p class="slds-m-bottom_xx-small">{cg.BillingState}</p>
                 </div>
             </div>
         </div>
