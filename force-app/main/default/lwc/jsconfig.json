@@ -11,6 +11,12 @@
             ],
             "c/pubsub": [
                 "pubsub/pubsub.js"
+            ],
+            "c/group-location": [
+                "groupLocation/groupLocation.js"
+            ],
+            "c/group-map": [
+                "groupMap/groupMap.js"
             ]
         }
     },
