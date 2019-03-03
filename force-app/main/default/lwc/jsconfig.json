@@ -3,15 +3,15 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
-            "c/cg-tile": [
-                "cgTile/cgTile.js"
-            ],
             "c/cg-list": [
                 "cgList/cgList.js"
             ],
+            "c/cg-tile": [
+                "cgTile/cgTile.js"
+            ],
             "c/pubsub": [
                 "pubsub/pubsub.js"
-            ]            
+            ]
         }
     },
     "include": [

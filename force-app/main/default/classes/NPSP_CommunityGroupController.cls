@@ -1,13 +1,13 @@
 public with sharing class NPSP_CommunityGroupController {
 
     @AuraEnabled(Cacheable=true)
-    public static Account[] getAllGroups() {
+    public static List<Account> getAllGroups() {
         return [SELECT Id, Name, BillingStreet, BillingCity, BillingState, BillingCountry
             FROM Account WHERE Community_Group_Host__c = TRUE ORDER BY Name LIMIT 50];
     }
 
     @AuraEnabled(Cacheable=true)
-    public static Account[] searchGroups(String searchTerm) {
+    public static List<Account> searchGroups(String searchTerm) {
         // Return all bears when no search term
         searchTerm = searchTerm.trim();
         if (searchTerm == '') {

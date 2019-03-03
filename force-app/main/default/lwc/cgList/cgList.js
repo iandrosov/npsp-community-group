@@ -11,7 +11,7 @@ export default class CgList extends NavigationMixin(LightningElement) {
 	@wire(CurrentPageReference) pageRef;
 	@wire(searchGroups, {searchTerm: '$searchTerm'})
 	loadBears(result) {
-		this.bears = result;
+		this.communityGroups = result;
 		if (result.data) {
 			fireEvent(this.pageRef, 'bearListUpdate', result.data);
 		}
