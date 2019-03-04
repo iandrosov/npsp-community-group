@@ -2,7 +2,8 @@ public with sharing class NPSP_CommunityGroupController {
 
     @AuraEnabled(Cacheable=true)
     public static List<Account> getAllGroups() {
-        return [SELECT Id, Name, BillingStreet, BillingCity, BillingState, BillingCountry
+        return [SELECT Id, Name, BillingStreet, BillingCity, BillingState, BillingCountry,
+                Location__Latitude__s, Location__Longitude__s
             FROM Account WHERE Community_Group_Host__c = TRUE ORDER BY Name LIMIT 50];
     }
 
@@ -16,7 +17,8 @@ public with sharing class NPSP_CommunityGroupController {
         // Prepare query paramters
         searchTerm = '%'+ searchTerm +'%';
         // Execute search query
-        return [SELECT Id, Name, BillingStreet, BillingCity, BillingState, BillingCountry
+        return [SELECT Id, Name, BillingStreet, BillingCity, BillingState, BillingCountry,
+                Location__Latitude__s, Location__Longitude__s
                 FROM Account 
                 WHERE Community_Group_Host__c = TRUE 
                 AND Name LIKE :searchTerm ORDER BY Name LIMIT 50];

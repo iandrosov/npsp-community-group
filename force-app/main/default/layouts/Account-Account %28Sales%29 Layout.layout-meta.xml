@@ -49,6 +49,10 @@
                 <behavior>Edit</behavior>
                 <field>Community_Group_Host__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Location__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
