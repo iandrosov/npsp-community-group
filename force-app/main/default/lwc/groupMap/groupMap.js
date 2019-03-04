@@ -21,7 +21,7 @@ export default class GroupMap extends LightningElement {
 				location: { Latitude, Longitude },
 				title: bear.Name,
 				description: `Coords: ${Latitude}, ${Longitude}`,
-				icon: 'utility:animal_and_nature'
+				icon: 'action:new_group'
 			};
 		});
 	}
