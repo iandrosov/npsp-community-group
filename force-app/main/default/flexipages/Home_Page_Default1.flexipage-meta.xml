@@ -5,7 +5,7 @@
             <componentName>cgList</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>home:heroChart</componentName>
+            <componentName>groupMap</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>top</name>
@@ -14,9 +14,6 @@
     <flexiPageRegions>
         <componentInstances>
             <componentName>home:eventContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>home:recentRecordContainer</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>bottomLeft</name>
@@ -27,7 +24,7 @@
             <componentName>runtime_sales_activities:todayTaskContainer</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>home:topDealsContainer</componentName>
+            <componentName>home:assistant</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>bottomRight</name>
@@ -35,10 +32,7 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>groupMap</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>home:assistant</componentName>
+            <componentName>home:recentRecordContainer</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>

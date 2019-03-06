@@ -13,14 +13,17 @@ export default class GroupMap extends LightningElement {
 		// unsubscribe from bearListUpdate event
 		unregisterAllListeners(this);
 	}
-	handleBearListUpdate(bears) {
-		this.mapMarkers = bears.map(bear => {
-			const Latitude = bear.Location__Latitude__s;
-			const Longitude = bear.Location__Longitude__s;
+	handleBearListUpdate(groups) {
+		this.mapMarkers = groups.map(group => {
+			const Latitude = group.Latitude__c;
+			const Longitude = group.Longitude__c;
+			const Street = group.BillingStreet__c;
+			const City = group.BillingCity__c;
+			const State = group.BillingState__c;
 			return {
 				location: { Latitude, Longitude },
-				title: bear.Name,
-				description: `Coords: ${Latitude}, ${Longitude}`,
+				title: group.Name,
+				description: `Location: ${Street}, ${City}, ${State}`,
 				icon: 'action:new_group'
 			};
 		});

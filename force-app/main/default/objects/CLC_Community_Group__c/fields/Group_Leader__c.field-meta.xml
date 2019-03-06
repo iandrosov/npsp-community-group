@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Leader__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Contact who is acting Group Leader, this will change over time by election</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contact who is acting Group Leader, this will change over time by election</inlineHelpText>
+    <label>Group Leader</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Community Groups</relationshipLabel>
+    <relationshipName>Community_Groups</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,9 +1,12 @@
 import { LightningElement, api, track, wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
 const fields = [
-	'Account.Name',
-	'Account.Location__Latitude__s',
-	'Account.Location__Longitude__s'
+	'CLC_Community_Group__c.Name',
+	'CLC_Community_Group__c.BillingStreet__c',
+	'CLC_Community_Group__c.BillingCity__c',
+	'CLC_Community_Group__c.BillingState__c',
+	'CLC_Community_Group__c.Latitude__c',
+	'CLC_Community_Group__c.Longitude__c'
 ];
 
 export default class GroupLocation extends LightningElement {
@@ -17,13 +20,16 @@ export default class GroupLocation extends LightningElement {
 		} else if (data) {
 			// Get Bear data
 			this.name = data.fields.Name.value;
-			const Latitude = data.fields.Location__Latitude__s.value;
-			const Longitude = data.fields.Location__Longitude__s.value;
+			const street = data.fields.BillingStreet__c.value;
+			const city = data.fields.BillingCity__c.value;
+			const state = data.fields.BillingState__c.value;
+			const Latitude = data.fields.Latitude__c.value;
+			const Longitude = data.fields.Longitude__c.value;
 			// Transform bear data into map markers
 			this.mapMarkers = [{
 				location: { Latitude, Longitude },
 				title: this.name,
-				description: `Coords: ${Latitude}, ${Longitude}`
+				description: `${street}, ${city} ${state}`
 			}];
 		}
 	}
