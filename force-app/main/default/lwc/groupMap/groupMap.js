@@ -21,7 +21,11 @@ export default class GroupMap extends LightningElement {
 			const City = group.BillingCity__c;
 			const State = group.BillingState__c;
 			return {
-				location: { Latitude, Longitude },
+				location: { Latitude, 
+							Longitude,  
+							Street: group.BillingStreet__c, 
+							City:  group.BillingCity__c,
+						    State:  group.BillingState__c },
 				title: group.Name,
 				description: `Location: ${Street}, ${City}, ${State}`,
 				icon: 'action:new_group'
